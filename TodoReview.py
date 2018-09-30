@@ -276,7 +276,7 @@ class TodoReviewRender(sublime_plugin.TextCommand):
 
 	def draw_file(self, item):
 		if settings.get('render_include_folder', False):
-			depth = settings.get('render_folder_depth', 1)
+			depth = settings.get('render_folder_depth', 'auto')
 			if depth == 'auto':
 				f = item['file']
 				for folder in sublime.active_window().folders():
